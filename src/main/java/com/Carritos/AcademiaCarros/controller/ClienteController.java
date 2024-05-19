@@ -42,13 +42,13 @@ public class ClienteController {
         return service.createCliente(categoria);
     }
     @PutMapping("/{id}")
-    public Cliente updateCategoria(@PathVariable int id, @RequestBody Categoria categoriaDetails) {
-        return service.updateCliente(id, categoriaDetails);
+    public Cliente updateCategoria(@PathVariable int id, @RequestBody Cliente clienteDetails) {
+        return service.updateCliente(id, clienteDetails);
     }
     
     @DeleteMapping("/{id}")
-    public void deleteCategoria(@PathVariable int id) {
-        service.deleteCategoria(id);
+    public void deleteCliente(@PathVariable int id) {
+        service.deleteCliente(id);
     }
 	
 	
