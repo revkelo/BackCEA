@@ -1,11 +1,12 @@
 package com.Carritos.AcademiaCarros.controller;
 
-import com.Carritos.AcademiaCarros.Model.MariaDB.PersonaM;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+
+import com.Carritos.AcademiaCarros.Model.MySQL1.PersonaM;
 
 import java.util.List;
 

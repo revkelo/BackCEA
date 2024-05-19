@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableJpaRepositories(
-    basePackages = "com.Carritos.AcademiaCarros.Repository.MariaDB", 
+    basePackages = "com.Carritos.AcademiaCarros.Repository.MySQL1", 
     entityManagerFactoryRef = "mysqlEMF", 
     transactionManagerRef = "mysqlTrxManager"
 )
@@ -52,7 +52,7 @@ public class MysqlConfig {
         return builder.dataSource(dataSource)
                 .persistenceUnit("mysql")
                 .properties(additionalProps)
-                .packages("com.Carritos.AcademiaCarros.Model.MariaDB")
+                .packages("com.Carritos.AcademiaCarros.Model.MySQL1")
                 .build();
     }
 

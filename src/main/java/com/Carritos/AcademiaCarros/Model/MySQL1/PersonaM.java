@@ -1,4 +1,4 @@
-package com.Carritos.AcademiaCarros.Model.MariaDB;
+package com.Carritos.AcademiaCarros.Model.MySQL1;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
