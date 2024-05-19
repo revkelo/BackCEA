@@ -10,7 +10,7 @@ import com.Carritos.AcademiaCarros.Model.MySQL2.Instructor_Practico;
 import com.Carritos.AcademiaCarros.Repository.MySQL2.RepositoryInstructor_Practico;
 
 @Service
-public class InstructorPractircoService {
+public class InstructorPracticoService {
 	 	@Autowired
 	    private RepositoryInstructor_Practico repository;
 

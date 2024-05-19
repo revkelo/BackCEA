@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.Carritos.AcademiaCarros.Model.MySQL2.Instructor_Practico;
 import com.Carritos.AcademiaCarros.Model.MySQL2.Instructor_Teorico;
-import com.Carritos.AcademiaCarros.Service.MySQL2.InstructorPractircoService;
+import com.Carritos.AcademiaCarros.Service.MySQL2.InstructorPracticoService;
 import com.Carritos.AcademiaCarros.Service.MySQL2.InstructorTeoricoService;
 
 @CrossOrigin(origins = "*")

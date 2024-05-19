@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Carritos.AcademiaCarros.Model.MySQL2.Instructor_Practico;
-import com.Carritos.AcademiaCarros.Service.MySQL2.InstructorPractircoService;
+import com.Carritos.AcademiaCarros.Service.MySQL2.InstructorPracticoService;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -23,7 +23,7 @@ import com.Carritos.AcademiaCarros.Service.MySQL2.InstructorPractircoService;
 public class Instructor_PracticoController {
 
     @Autowired
-    private InstructorPractircoService service;
+    private InstructorPracticoService service;
 
     @GetMapping
     public List<Instructor_Practico> getAllInstructors() {
