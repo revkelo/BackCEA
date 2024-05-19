@@ -18,6 +18,7 @@ import com.Carritos.AcademiaCarros.Service.MySQL2.ExamenTeoricoService;
 
 @CrossOrigin(origins = "*")
 @RestController
+@RequestMapping("/api/examen-teorico")  // Adjust path as needed
 public class ExamenTeoricoController {
 
     @Autowired
@@ -29,12 +30,12 @@ public class ExamenTeoricoController {
     }
 
     @GetMapping("/{id}")
-    public Optional<ExamenTeorico> getExamenPracticoById(@PathVariable int id) {
+    public Optional<ExamenTeorico> getExamenTeoricoById(@PathVariable int id) {
         return service.getExamenTeoricoById(id);
     }
 
     @PostMapping
-    public ExamenTeorico createExamenPractico(@RequestBody ExamenTeorico examenTeorico) {
+    public ExamenTeorico createExamenTeorico(@RequestBody ExamenTeorico examenTeorico) {
         return service.createExamenTeorico(examenTeorico);
     }
 

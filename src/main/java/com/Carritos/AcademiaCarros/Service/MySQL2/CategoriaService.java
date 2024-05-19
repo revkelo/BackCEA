@@ -7,13 +7,13 @@ import org.springframework.stereotype.Service;
 
 
 import com.Carritos.AcademiaCarros.Model.MySQL2.Categoria;
-import com.Carritos.AcademiaCarros.Repository.MySQL2.RepositoryCatrgoria;
+import com.Carritos.AcademiaCarros.Repository.MySQL2.RepositoryCategoria;
 
 @Service
 public class CategoriaService {
 
 	
-	private RepositoryCatrgoria repository;
+	private RepositoryCategoria repository;
 	
 	
 	 public List<Categoria> getAllCategoria() {
