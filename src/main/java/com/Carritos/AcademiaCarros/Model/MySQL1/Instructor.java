@@ -8,30 +8,30 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "instructor")
 public class Instructor {
-	
+
 	@Id
 	@Column(name = "ID_Instructor")
 	private int id_instructor;
-	
+
 	@Column(name = "Cedula")
-	private int Cedula;
-	
-	@Column(name= "Nombre")
+	private int cedula;
+
+	@Column(name = "Nombre")
 	private String nombre;
 
-	@Column(name= "Apellido")
+	@Column(name = "Apellido")
 	private String apellido;
-	
-	@Column(name= "Correo")
+
+	@Column(name = "Correo")
 	private String correo;
-	
-	@Column(name= "Telefono")
+
+	@Column(name = "Telefono")
 	private String telefono;
-	
-	@Column(name= "Tipo_instructor")
+
+	@Column(name = "Tipo_instructor")
 	private String tipo_instructor;
-	
-	@Column(name= "Disponibilidad")
+
+	@Column(name = "Disponibilidad")
 	private String disponibilidad;
 
 	/**
@@ -52,14 +52,11 @@ public class Instructor {
 	 * @return the cedula
 	 */
 	public int getCedula() {
-		return Cedula;
+		return cedula;
 	}
 
-	/**
-	 * @param cedula the cedula to set
-	 */
 	public void setCedula(int cedula) {
-		Cedula = cedula;
+		this.cedula = cedula;
 	}
 
 	/**
@@ -145,6 +142,5 @@ public class Instructor {
 	public void setDisponibilidad(String disponibilidad) {
 		this.disponibilidad = disponibilidad;
 	}
-	
-	
+
 }

@@ -31,9 +31,9 @@ public class InstructorController {
         return service.getAllInstructors();
     }
 
-    @GetMapping("/{id}")
-    public Optional<Instructor> getInstructorById(@PathVariable int id) {
-        return service.getInstructorById(id);
+    @GetMapping("/{cedula}")
+    public Optional<Instructor> getInstructorByCedula(@PathVariable int cedula) {
+        return service.getInstructorByCedula(cedula);
     }
 
     @PostMapping

@@ -18,8 +18,8 @@ public class InstructorService {
 	        return repository.findAll();
 	    }
 
-	    public Optional<Instructor> getInstructorById(int id) {
-	        return repository.findById(id);
+	    public Optional<Instructor> getInstructorByCedula(int Cedula) {
+	        return repository.findByCedula(Cedula);
 	    }
 
 	    public Instructor createInstructor(Instructor instructor) {
