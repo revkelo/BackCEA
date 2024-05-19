@@ -13,15 +13,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.Carritos.AcademiaCarros.Model.MySQL2.Categoria;
 import com.Carritos.AcademiaCarros.Model.Oracle.Cliente;
-import com.Carritos.AcademiaCarros.Service.MySQL2.CategoriaService;
 import com.Carritos.AcademiaCarros.Service.Oracle.ClienteService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/cliente")
+@RequestMapping("/cliente")
 public class ClienteController {
 	
 	@Autowired

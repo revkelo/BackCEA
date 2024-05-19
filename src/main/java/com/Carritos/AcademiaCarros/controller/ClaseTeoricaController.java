@@ -22,7 +22,7 @@ import com.Carritos.AcademiaCarros.Service.Mysql.ClasePracticaService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/clase-teorica")
+@RequestMapping("/clase-teorica")
 public class ClaseTeoricaController {
     @Autowired
     private ClaseTeoricaService service;

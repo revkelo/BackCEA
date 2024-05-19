@@ -19,7 +19,7 @@ import com.Carritos.AcademiaCarros.Service.Mysql.VehiculoService; // Replace wit
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/vehiculo")  // Adjust path as needed
+@RequestMapping("/vehiculo")  // Adjust path as needed
 public class VehiculoController {
 
     @Autowired

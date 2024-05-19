@@ -20,7 +20,7 @@ import com.Carritos.AcademiaCarros.Service.MySQL2.MatriculadosService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/matriculados")  // Adjust path as needed
+@RequestMapping("/matriculados")  // Adjust path as needed
 public class MatriculadosController {
 
 

@@ -18,7 +18,7 @@ import com.Carritos.AcademiaCarros.Service.Mysql.ExamenPracticoService; // Repla
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/examen-practico")  // Adjust path as needed
+@RequestMapping("/examen-practico")  // Adjust path as needed
 public class ExamenPracticoController {
 
     @Autowired

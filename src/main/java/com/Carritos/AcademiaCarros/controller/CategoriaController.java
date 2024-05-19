@@ -20,7 +20,7 @@ import com.Carritos.AcademiaCarros.Service.MySQL2.CategoriaService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/categoria")
+@RequestMapping("/categoria")
 public class CategoriaController {
 	
 	@Autowired
