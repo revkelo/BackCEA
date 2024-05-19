@@ -33,16 +33,16 @@ public class ClienteController {
     }
 	
 	@GetMapping("/{id}")
-    public Optional<Cliente> getCategoriaById(@PathVariable int id) {
+    public Optional<Cliente> getClienteById(@PathVariable int id) {
         return service.getClienteById(id);
     }
 
     @PostMapping
-    public Cliente createCategoria(@RequestBody Cliente categoria) {
-        return service.createCliente(categoria);
+    public Cliente createCliente(@RequestBody Cliente cliente) {
+        return service.createCliente(cliente);
     }
     @PutMapping("/{id}")
-    public Cliente updateCategoria(@PathVariable int id, @RequestBody Cliente clienteDetails) {
+    public Cliente updateCliente(@PathVariable int id, @RequestBody Cliente clienteDetails) {
         return service.updateCliente(id, clienteDetails);
     }
     

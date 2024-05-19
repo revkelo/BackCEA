@@ -3,18 +3,17 @@ package com.Carritos.AcademiaCarros.Service.Oracle;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-import com.Carritos.AcademiaCarros.Model.MySQL2.ClaseTeorica;
 import com.Carritos.AcademiaCarros.Model.Oracle.Cliente;
-import com.Carritos.AcademiaCarros.Repository.MySQL2.RepositoryClaseTeorica;
 import com.Carritos.AcademiaCarros.Repository.Oracle.RepositoryCliente;
 
 @Service
 public class ClienteService {
 
-	
+	@Autowired
 	private RepositoryCliente repository;
 	
 	

@@ -29,7 +29,7 @@ public class ClaseTeoricaService {
 	    }
 
 	    public ClaseTeorica updateClaseTeoricas(int id, ClaseTeorica clasedetails) {
-	    	ClaseTeorica clase = repository.findById(id).orElseThrow(() -> new RuntimeException("Clase practica not found"));
+	    	ClaseTeorica clase = repository.findById(id).orElseThrow(() -> new RuntimeException("Clase teorica not found"));
 	    	clase.setiD_claseT(clasedetails.getiD_claseT());
 	    	clase.setiD_instructor(clasedetails.getiD_instructor());
 	    	clase.setiD_matriculado(clasedetails.getiD_matriculado());
