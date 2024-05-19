@@ -1,4 +1,4 @@
-package com.Carritos.AcademiaCarros.Model.MySQL1;
+package com.Carritos.AcademiaCarros.Model.MySQL2;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

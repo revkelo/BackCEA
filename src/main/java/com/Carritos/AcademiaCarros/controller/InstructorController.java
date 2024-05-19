@@ -14,34 +14,35 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Carritos.AcademiaCarros.Model.MySQL2.Instructor_Practico;
-import com.Carritos.AcademiaCarros.Service.MySQL2.InstructorPracticoService;
+import com.Carritos.AcademiaCarros.Model.MySQL1.Instructor;
+import com.Carritos.AcademiaCarros.Service.Mysql.InstructorService;
+
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/instructor-practico")
-public class Instructor_PracticoController {
+@RequestMapping("/api/instructor-practico")
+public class InstructorController {
 
     @Autowired
-    private InstructorPracticoService service;
+    private InstructorService service;
 
     @GetMapping
-    public List<Instructor_Practico> getAllInstructors() {
+    public List<Instructor> getAllInstructors() {
         return service.getAllInstructors();
     }
 
     @GetMapping("/{id}")
-    public Optional<Instructor_Practico> getInstructorById(@PathVariable int id) {
+    public Optional<Instructor> getInstructorById(@PathVariable int id) {
         return service.getInstructorById(id);
     }
 
-    @PostMapping("/Agregarinstructor-practico")
-    public Instructor_Practico createInstructor(@RequestBody Instructor_Practico instructor) {
+    @PostMapping
+    public Instructor createInstructor(@RequestBody Instructor instructor) {
         return service.createInstructor(instructor);
     }
 
     @PutMapping("/{id}")
-    public Instructor_Practico updateInstructor(@PathVariable int id, @RequestBody Instructor_Practico instructorDetails) {
+    public Instructor updateInstructor(@PathVariable int id, @RequestBody Instructor instructorDetails) {
         return service.updateInstructor(id, instructorDetails);
     }
 

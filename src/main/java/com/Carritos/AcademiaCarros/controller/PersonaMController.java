@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import com.Carritos.AcademiaCarros.Model.MySQL1.PersonaM;
+import com.Carritos.AcademiaCarros.Model.MySQL2.PersonaM;
 
 import java.util.List;
 

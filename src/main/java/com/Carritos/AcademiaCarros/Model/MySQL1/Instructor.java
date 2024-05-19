@@ -1,4 +1,4 @@
-package com.Carritos.AcademiaCarros.Model.MySQL2;
+package com.Carritos.AcademiaCarros.Model.MySQL1;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -6,8 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Instructor_Teorico")
-public class Instructor_Teorico {
+@Table(name = "Instructor")
+public class Instructor {
 	
 	@Id
 	@Column(name = "ID_Instructor")
