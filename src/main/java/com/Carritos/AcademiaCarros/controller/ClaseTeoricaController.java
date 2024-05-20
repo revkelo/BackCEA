@@ -26,7 +26,7 @@ public class ClaseTeoricaController {
     private ClaseTeoricaService service;
 
     @GetMapping
-    public List<ClaseTeorica> getAllClasesTeorica() {
+    public List<ClaseTeorica> getAllClaseTeorica() {
         return service.getAllClaseTeorica();
     }
 

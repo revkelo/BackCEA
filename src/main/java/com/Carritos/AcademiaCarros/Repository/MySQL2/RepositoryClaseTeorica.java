@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.Carritos.AcademiaCarros.Model.MySQL2.ClaseTeorica;
 
-public interface RepositoryClaseT extends JpaRepository<ClaseTeorica, Integer>{
+public interface RepositoryClaseTeorica  extends JpaRepository<ClaseTeorica, Integer> {
 
 }

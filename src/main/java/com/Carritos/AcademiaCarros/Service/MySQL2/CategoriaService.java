@@ -3,6 +3,7 @@ package com.Carritos.AcademiaCarros.Service.MySQL2;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
@@ -12,7 +13,7 @@ import com.Carritos.AcademiaCarros.Repository.MySQL2.RepositoryCategoria;
 @Service
 public class CategoriaService {
 
-	
+	@Autowired
 	private RepositoryCategoria repository;
 	
 	
@@ -20,7 +21,7 @@ public class CategoriaService {
 	        return repository.findAll();
 	    }
 
-	    public Optional<Categoria> getClaseCategoriaById(int id) {
+	    public Optional<Categoria> getCategoriaById(int id) {
 	        return repository.findById(id);
 	    }
 

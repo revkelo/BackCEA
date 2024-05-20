@@ -33,7 +33,7 @@ public class CategoriaController {
 	
 	@GetMapping("/{id}")
     public Optional<Categoria> getCategoriaById(@PathVariable int id) {
-        return service.getClaseCategoriaById(id);
+        return service.getCategoriaById(id);
     }
 
     @PostMapping
