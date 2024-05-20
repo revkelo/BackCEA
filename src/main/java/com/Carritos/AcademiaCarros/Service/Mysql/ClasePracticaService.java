@@ -32,6 +32,7 @@ public class ClasePracticaService {
     	clase.setIdInstructor(clasePracticaDetails.getIdInstructor());
     	clase.setIdMatriculado(clasePracticaDetails.getIdMatriculado());
     	clase.setIdVehiculo(clasePracticaDetails.getIdVehiculo());
+    	clase.setDescripcion(clasePracticaDetails.getDescripcion());
         return repository.save(clase);
     }
     public void deleteClasePractica(int id) {

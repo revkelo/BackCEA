@@ -21,6 +21,24 @@ public class ClasePractica {
 
     @Column(name = "ID_matriculado")
     private int idMatriculado;
+    
+    @Column(name = "descripcion")
+    private String descripcion;
+
+    
+	/**
+	 * @return the descripcion
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	/**
+	 * @param descripcion the descripcion to set
+	 */
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
 	public int getIdClasePractica() {
 		return idClasePractica;

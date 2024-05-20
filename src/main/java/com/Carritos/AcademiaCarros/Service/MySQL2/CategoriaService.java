@@ -33,9 +33,9 @@ public class CategoriaService {
 	    	Categoria categoria = repository.findById(id).orElseThrow(() -> new RuntimeException("Categoria not found"));
 	    	categoria.setiD_categoria(categoriaDetails.getiD_categoria());
 	    	categoria.setNombre_categoria(categoriaDetails.getNombre_categoria());
-	    	categoria.setHoras_practicas(categoriaDetails.getHoras_practicas());
-	    	categoria.setHoras_teoricas(categoriaDetails.getNombre_categoria());
 	    	categoria.setPrecio(categoriaDetails.getPrecio());
+	    	categoria.setHoras_practicas(categoriaDetails.getHoras_practicas());
+	    	categoria.setHoras_teoricas(categoriaDetails.getHoras_teoricas());
 	        return repository.save(categoria);
 	    }
 	    public void deleteCategoria(int id) {
