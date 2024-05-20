@@ -27,12 +27,8 @@ public class ClaseTeoricaService {
 		return repository.save(clase);
 	}
 
-	public ClaseTeorica updateClaseTeorica(int id, ClaseTeorica clasedetails) {
-		ClaseTeorica clase = repository.findById(id).orElseThrow(() -> new RuntimeException("Clase teorica not found"));
-		clase.setiD_claseT(clasedetails.getiD_claseT());
-		clase.setiD_instructor(clasedetails.getiD_instructor());
-		clase.setiD_matriculado(clasedetails.getiD_matriculado());
-		clase.setDescripcion(clasedetails.getDescripcion());
+	public ClaseTeorica updateClaseTeorica(ClaseTeorica clasedetails) {
+		
 		return repository.save(clase);
 	}
 

@@ -27,13 +27,9 @@ public class ClasePracticaService {
         return repository.save(clasePractica);
     }
 
-    public ClasePractica updateClasePractica(int id, ClasePractica clasePracticaDetails) {
-    	ClasePractica clase = repository.findById(id).orElseThrow(() -> new RuntimeException("Clase practica not found"));
-    	clase.setIdInstructor(clasePracticaDetails.getIdInstructor());
-    	clase.setIdMatriculado(clasePracticaDetails.getIdMatriculado());
-    	clase.setIdVehiculo(clasePracticaDetails.getIdVehiculo());
-    	clase.setDescripcion(clasePracticaDetails.getDescripcion());
-        return repository.save(clase);
+    public ClasePractica updateClasePractica(ClasePractica clasePracticaDetails) {
+    	
+        return repository.save(clasePracticaDetails);
     }
     public void deleteClasePractica(int id) {
         repository.deleteById(id);

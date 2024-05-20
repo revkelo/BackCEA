@@ -13,8 +13,8 @@ public class Examen_Practico {
 	@Column(name = "ID_examenP")
 	private int iD_examen;
 	
-	@Column(name = "ID_matriculados")	
-	private int iD_matriculados;
+	@Column(name = "ID_matriculado")	
+	private int iD_matriculado;
 	
 	@Column(name = "ID_instructor")
 	private int iD_instructor;	
@@ -43,14 +43,14 @@ public class Examen_Practico {
 	 * @return the iD_matriculados
 	 */
 	public int getiD_matriculados() {
-		return iD_matriculados;
+		return iD_matriculado;
 	}
 
 	/**
 	 * @param iD_matriculados the iD_matriculados to set
 	 */
 	public void setiD_matriculados(int iD_matriculados) {
-		this.iD_matriculados = iD_matriculados;
+		this.iD_matriculado = iD_matriculados;
 	}
 
 	/**
