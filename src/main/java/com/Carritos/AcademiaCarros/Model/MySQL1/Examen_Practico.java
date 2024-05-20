@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 public class Examen_Practico {
 	
 	@Id
-	@Column(name = "ID_examen")
+	@Column(name = "ID_examenP")
 	private int iD_examen;
 	
 	@Column(name = "ID_matriculados")	

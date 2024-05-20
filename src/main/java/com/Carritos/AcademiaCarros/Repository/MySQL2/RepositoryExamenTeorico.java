@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.Carritos.AcademiaCarros.Model.MySQL2.ExamenTeorico;
 
 
-	public interface RepositoryExamenTeorico extends JpaRepository<ExamenTeorico, Integer> {
+public interface RepositoryExamenTeorico extends JpaRepository<ExamenTeorico, Integer> {
 
-	}
+}
 

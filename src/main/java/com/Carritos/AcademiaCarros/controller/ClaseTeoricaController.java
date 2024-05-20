@@ -14,11 +14,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.Carritos.AcademiaCarros.Model.MySQL1.ClasePractica;
 import com.Carritos.AcademiaCarros.Model.MySQL2.ClaseTeorica;
 import com.Carritos.AcademiaCarros.Service.MySQL2.ClaseTeoricaService;
-import com.Carritos.AcademiaCarros.Service.Mysql.ClasePracticaService;
+
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -29,25 +27,25 @@ public class ClaseTeoricaController {
 
     @GetMapping
     public List<ClaseTeorica> getAllClasesTeorica() {
-        return service.getAllClasesTeoricas();
+        return service.getAllClaseTeorica();
     }
 
     @GetMapping("/{id}")
     public Optional<ClaseTeorica> getClaseTeoricaById(@PathVariable int id) {
-        return service.getClaseTeoricasById(id);
+        return service.getClaseTeoricaById(id);
     }
 
     @PostMapping
     public ClaseTeorica createClaseTeorica(@RequestBody ClaseTeorica claseTeorica) {
-        return service.createClaseTeoricas(claseTeorica);
+        return service.createClaseTeorica(claseTeorica);
     }
     @PutMapping("/{id}")
     public ClaseTeorica updateClaseTeorica(@PathVariable int id, @RequestBody ClaseTeorica claseTeoricaDetails) {
-        return service.updateClaseTeoricas(id, claseTeoricaDetails);
+        return service.updateClaseTeorica(id, claseTeoricaDetails);
     }
     
     @DeleteMapping("/{id}")
     public void deleteClaseTeorica(@PathVariable int id) {
-        service.deleteClaseTeoricas(id);
+        service.deleteClaseTeorica(id);
     }
 }
