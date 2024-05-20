@@ -27,12 +27,10 @@ public class ExamenTeoricoService {
 	        return repository.save(examenTeorico);
 	    }
 
-	    public ExamenTeorico updateExamenTeorico(int id, ExamenTeorico examenTeoricoDetails) {
-	    	ExamenTeorico examenTeorico = repository.findById(id).orElseThrow(() -> new RuntimeException("Examen teorico not found"));
-	    	examenTeorico.setID_matriculados(examenTeoricoDetails.getID_matriculados());
-	    	examenTeorico.setResultado(examenTeoricoDetails.getResultado());
+	    public ExamenTeorico updateExamenTeorico(ExamenTeorico examenTeoricoDetails) {
+	    	
 	       
-	        return repository.save(examenTeorico);
+	        return repository.save(examenTeoricoDetails);
 	    }
 
 	    public void deleteExamenTeorico(int id) {

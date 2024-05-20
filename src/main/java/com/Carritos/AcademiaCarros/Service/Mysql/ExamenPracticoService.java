@@ -26,14 +26,10 @@ public class ExamenPracticoService {
         return repository.save(examenPractico);
     }
 
-    public Examen_Practico updateExamenPractico(int id, Examen_Practico examenPracticoDetails) {
-        Examen_Practico examenPractico = repository.findById(id).orElseThrow(() -> new RuntimeException("Examen Practico not found"));
-        examenPractico.setiD_instructor(examenPracticoDetails.getiD_instructor());
-        examenPractico.setiD_matriculados(examenPracticoDetails.getiD_matriculados());
-        examenPractico.setiD_vehiculo(examenPracticoDetails.getiD_vehiculo());
-        examenPractico.setResultado(examenPracticoDetails.getResultado());
+    public Examen_Practico updateExamenPractico(Examen_Practico examenPracticoDetails) {
        
-        return repository.save(examenPractico);
+       
+        return repository.save(examenPracticoDetails);
     }
 
     public void deleteExamenPractico(int id) {

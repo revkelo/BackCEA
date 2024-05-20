@@ -29,7 +29,7 @@ public class ClaseTeoricaService {
 
 	public ClaseTeorica updateClaseTeorica(ClaseTeorica clasedetails) {
 		
-		return repository.save(clase);
+		return repository.save(clasedetails);
 	}
 
 	public void deleteClaseTeorica(int id) {
