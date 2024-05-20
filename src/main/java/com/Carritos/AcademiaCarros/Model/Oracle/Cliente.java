@@ -2,44 +2,49 @@ package com.Carritos.AcademiaCarros.Model.Oracle;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "CLIENTE")
 public class Cliente {
 
-	@Id
-	@Column(name = "ID_CLIENTE")
-	private int id_cliente;
-	
-	@Column(name = "NOMBRE")
-	private String nombre;
-	
-	@Column(name = "APELLIDO")
-	private String apellido;
-	
-	@Column(name = "TELEFONO")
-	private String telefono;
-	
-	@Column(name = "CORREO")
-	private String correo;
-	
-	@Column(name = "CEDULA")
-	private int cedula;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_seq_gen")
+    @SequenceGenerator(name = "cliente_seq_gen", sequenceName = "CLIENTE_SEQ", allocationSize = 1)
+    @Column(name = "ID_CLIENTE")
+    private Long idCliente;
+
+    @Column(name = "NOMBRE", nullable = false)
+    private String nombre;
+
+    @Column(name = "APELLIDO", nullable = false)
+    private String apellido;
+
+    @Column(name = "TELEFONO", nullable = false)
+    private String telefono;
+
+    @Column(name = "CORREO", nullable = false)
+    private String correo;
+
+    @Column(name = "CEDULA", nullable = false)
+    private Long cedula;
 
 	/**
-	 * @return the id_cliente
+	 * @return the idCliente
 	 */
-	public int getId_cliente() {
-		return id_cliente;
+	public Long getIdCliente() {
+		return idCliente;
 	}
 
 	/**
-	 * @param id_cliente the id_cliente to set
+	 * @param idCliente the idCliente to set
 	 */
-	public void setId_cliente(int id_cliente) {
-		this.id_cliente = id_cliente;
+	public void setIdCliente(Long idCliente) {
+		this.idCliente = idCliente;
 	}
 
 	/**
@@ -101,15 +106,16 @@ public class Cliente {
 	/**
 	 * @return the cedula
 	 */
-	public int getCedula() {
+	public Long getCedula() {
 		return cedula;
 	}
 
 	/**
 	 * @param cedula the cedula to set
 	 */
-	public void setCedula(int cedula) {
+	public void setCedula(Long cedula) {
 		this.cedula = cedula;
 	}
-	  
+
+    // Getters y setters
 }

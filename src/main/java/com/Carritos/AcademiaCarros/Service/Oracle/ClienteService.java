@@ -31,7 +31,7 @@ public class ClienteService {
 
 	    public Cliente updateCliente(int id, Cliente clienteDetails) {
 	    	Cliente cliente = repository.findById(id).orElseThrow(() -> new RuntimeException("Clase practica not found"));
-	    	cliente.setId_cliente(clienteDetails.getId_cliente());
+	  
 	    	cliente.setNombre(clienteDetails.getNombre());
 	    	cliente.setApellido(clienteDetails.getApellido());
 	    	cliente.setCorreo(clienteDetails.getCorreo());

@@ -20,33 +20,35 @@ import com.Carritos.AcademiaCarros.Service.Oracle.ClienteService;
 @RestController
 @RequestMapping("/cliente")
 public class ClienteController {
-	
+
 	@Autowired
 	private ClienteService service;
-	
-	@GetMapping
-	  public List<Cliente> getAllCliente() {
-        return service.getAllCliente();
-    }
-	
-	@GetMapping("/{id}")
-    public Optional<Cliente> getClienteById(@PathVariable int id) {
-        return service.getClienteById(id);
-    }
 
-    @PostMapping
-    public Cliente createCliente(@RequestBody Cliente cliente) {
-        return service.createCliente(cliente);
-    }
-    @PutMapping("/{id}")
-    public Cliente updateCliente(@PathVariable int id, @RequestBody Cliente clienteDetails) {
-        return service.updateCliente(id, clienteDetails);
-    }
-    
-    @DeleteMapping("/{id}")
-    public void deleteCliente(@PathVariable int id) {
-        service.deleteCliente(id);
-    }
-	
-	
+	@GetMapping
+	public List<Cliente> getAllCliente() {
+		return service.getAllCliente();
+	}
+
+	@GetMapping("/{id}")
+	public Optional<Cliente> getClienteById(@PathVariable int id) {
+		return service.getClienteById(id);
+	}
+
+	@PostMapping
+	public Cliente createCliente(@RequestBody Cliente cliente) {
+
+
+		return service.createCliente(cliente);
+	}
+
+	@PutMapping("/{id}")
+	public Cliente updateCliente(@PathVariable int id, @RequestBody Cliente clienteDetails) {
+		return service.updateCliente(id, clienteDetails);
+	}
+
+	@DeleteMapping("/{id}")
+	public void deleteCliente(@PathVariable int id) {
+		service.deleteCliente(id);
+	}
+
 }
