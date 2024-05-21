@@ -47,7 +47,7 @@ public class InstructorController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteInstructor(@PathVariable int id) {
-        service.deleteInstructor(id);
+    public void deleteInstructor(@PathVariable int cedula) {
+        service.deleteInstructorbyCedula(cedula);
     }
 }
