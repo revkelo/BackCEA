@@ -13,4 +13,5 @@ public interface RepositoryInstructor extends JpaRepository<Instructor, Integer>
 
 	
 	public Optional<Instructor> findByCedula(Integer Cedula);
+	public Optional<Instructor> deleteByCedula(Integer Cedula);
 }

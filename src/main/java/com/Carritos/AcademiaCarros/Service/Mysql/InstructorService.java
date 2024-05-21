@@ -38,8 +38,8 @@ public class InstructorService {
 	        return repository.save(instructor);
 	    }
 
-	    public void deleteInstructor(int id) {
-	        repository.deleteById(id);
+	    public void deleteInstructorbyCedula(int cedula) {
+	        repository.deleteByCedula(cedula);
 	    }
 	    
 }
