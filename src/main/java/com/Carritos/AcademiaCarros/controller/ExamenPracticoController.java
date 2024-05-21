@@ -56,10 +56,11 @@ public class ExamenPracticoController {
    	}
 
     @PutMapping("/{id}")
-    public Examen_Practico updateExamenPractico(@PathVariable int id, @RequestParam int ID_instructor, @RequestParam int ID_matriculado,
+    public Examen_Practico updateExamenPractico(@RequestParam int id, @RequestParam int ID_instructor, @RequestParam int ID_matriculado,
    			@RequestParam int ID_vehiculo, @RequestParam String resultado) {
     	 Examen_Practico examenPractico = service.getExamenPracticoById(id).orElseThrow(() -> new RuntimeException("Examen Practico not found"));
-         examenPractico.setiD_instructor(id);
+         examenPractico.setiD_examen(id);
+    	 examenPractico.setiD_instructor(ID_instructor);
          examenPractico.setiD_matriculados(ID_matriculado);
          examenPractico.setiD_vehiculo(ID_vehiculo);
          examenPractico.setResultado(resultado);

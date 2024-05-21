@@ -25,8 +25,9 @@ import jakarta.persistence.EntityManager;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/clase-teorica")
+@RequestMapping("/claseteorica")
 public class ClaseTeoricaController {
+	
 	@Autowired
 	private ClaseTeoricaService service;
 
@@ -40,7 +41,7 @@ public class ClaseTeoricaController {
 		return service.getClaseTeoricaById(id);
 	}
 
-	@PostMapping("/agregar")
+	@PostMapping("/Agregar")
 	public ResponseEntity<String> agregar(@RequestParam int ID_instructor, @RequestParam int ID_matriculado,
 			@RequestParam String Descripcion) {
 		ClaseTeorica temp = new ClaseTeorica();
@@ -53,7 +54,7 @@ public class ClaseTeoricaController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<String> updateClaseTeorica(@PathVariable int id, @RequestParam int ID_instructor,
+	public ResponseEntity<String> updateClaseTeorica(@RequestParam int id, @RequestParam int ID_instructor,
 			@RequestParam int ID_matriculado, @RequestParam String Descripcion) {
 		ClaseTeorica clase = service.getClaseTeoricaById(id).orElseThrow(() -> new RuntimeException("Clase teorica not found"));
 		clase.setiD_claseT(id);

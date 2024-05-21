@@ -1,4 +1,5 @@
 package com.Carritos.AcademiaCarros.controller;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -22,39 +23,45 @@ import com.Carritos.AcademiaCarros.Service.MySQL2.ExamenTeoricoService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/examen-teorico")  // Adjust path as needed
+@RequestMapping("/examen-teorico") // Adjust path as needed
 public class ExamenTeoricoController {
 
-    @Autowired
-    private ExamenTeoricoService service;
+	@Autowired
+	private ExamenTeoricoService service;
 
-    @GetMapping
-    public List<ExamenTeorico> getAllExamenesTeoricos() {
-        return service.getAllExamenesTeoricos();
-    }
+	@GetMapping
+	public List<ExamenTeorico> getAllExamenesTeoricos() {
+		return service.getAllExamenesTeoricos();
+	}
 
-    @GetMapping("/{id}")
-    public Optional<ExamenTeorico> getExamenTeoricoById(@PathVariable int id) {
-        return service.getExamenTeoricoById(id);
-    }
+	@GetMapping("/{id}")
+	public Optional<ExamenTeorico> getExamenTeoricoById(@PathVariable int id) {
+		return service.getExamenTeoricoById(id);
+	}
 
-    @PostMapping("/agregar")
-   	public ResponseEntity<String> agregar(@RequestParam int ID_matriculado,@RequestParam String resultado) {
-    	ExamenTeorico temp = new ExamenTeorico();
-   		temp.setID_matriculados(ID_matriculado);
-   		temp.setResultado(resultado);
+	@PostMapping("/agregar")
+	public ResponseEntity<String> agregar(@RequestParam int ID_matriculado, @RequestParam String resultado) {
+		ExamenTeorico temp = new ExamenTeorico();
+		temp.setID_matriculados(ID_matriculado);
+		temp.setResultado(resultado);
 
-   		service.createExamenTeorico(temp);
-   		return ResponseEntity.status(HttpStatus.CREATED).body("Dato creado con Ã©xito: 201");
-   	}
+		service.createExamenTeorico(temp);
+		return ResponseEntity.status(HttpStatus.CREATED).body("Dato creado con Ã©xito: 201");
+	}
 
-    @PutMapping("/{id}")
-    public ExamenTeorico updateExamenTeorico(@PathVariable int id, @RequestBody ExamenTeorico examenTeoricoDetails) {
-        return service.updateExamenTeorico(examenTeoricoDetails);
-    }
+	@PutMapping("/{id}")
+	public  ResponseEntity<String> updateExamenTeorico(@RequestParam int id, @RequestParam int ID_matriculado,
+			@RequestParam String resultado) {
+		ExamenTeorico examenPractico = service.getExamenTeoricoById(id).orElseThrow(() -> new RuntimeException("Examen Practico not found"));
+         examenPractico.setID_examenT(id);
+         examenPractico.setID_matriculados(ID_matriculado);
+         examenPractico.setResultado(resultado);
+         service.updateExamenTeorico(examenPractico);
+		return ResponseEntity.status(HttpStatus.CREATED).body("Dato actualizado con Ã©xito: 201");
+	}
 
-    @DeleteMapping("/{id}")
-    public void deleteExamenTeorico(@PathVariable int id) {
-        service.deleteExamenTeorico(id);
-    }
+	@DeleteMapping("/{id}")
+	public void deleteExamenTeorico(@PathVariable int id) {
+		service.deleteExamenTeorico(id);
+	}
 }
