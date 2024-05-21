@@ -50,7 +50,7 @@ public class ExamenTeoricoController {
 
     @PutMapping("/{id}")
     public ExamenTeorico updateExamenTeorico(@PathVariable int id, @RequestBody ExamenTeorico examenTeoricoDetails) {
-        return service.updateExamenTeorico(id, examenTeoricoDetails);
+        return service.updateExamenTeorico(examenTeoricoDetails);
     }
 
     @DeleteMapping("/{id}")
