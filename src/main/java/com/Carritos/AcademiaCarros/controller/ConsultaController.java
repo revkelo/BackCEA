@@ -52,9 +52,50 @@ public class ConsultaController {
 					+ "WHERE cea2.matriculados.ID_cliente = ?";
 			break;
 		case 3:
-			// Agrega el resto de las consultas aquí
+			query = "SELECT cea2.claseteorica.ID_claseT, cea2.claseteorica.descripcion, cea.instructor.Nombre, cea.instructor.Apellido\r\n"
+					+ "FROM cea2.claseteorica\r\n"
+					+ "JOIN cea2.matriculados ON cea2.claseteorica.ID_matriculado = cea2.matriculados.ID_matriculado\r\n"
+					+ "JOIN cea.instructor  ON cea2.claseteorica.ID_instructor = cea.instructor.ID_instructor\r\n"
+					+ "WHERE cea2.matriculados.ID_cliente = 1;";
 			break;
-		// Agrega más casos para el resto de las consultas
+		case 4:
+			query = "SELECT cea.instructor.ID_instructor, cea.instructor.Nombre, cea.instructor.Apellido, cea.clasepractica.ID_claseP, cea.clasepractica.descripcion\r\n"
+					+ "FROM cea.instructor\r\n"
+					+ "JOIN cea.clasepractica ON cea.instructor.ID_instructor = cea.clasepractica.ID_instructor\r\n"
+					+ "WHERE cea.instructor.ID_instructor = 1;";
+			break;
+		case 5:
+			query = "SELECT cea.examenpractico.ID_examenP, cea.examenpractico.resultado, cea.examenpractico.ID_instructor, cea.examenpractico.ID_vehiculo\r\n"
+					+ "FROM cea.examenpractico \r\n"
+					+ "JOIN cea2.matriculados ON cea.examenpractico.ID_matriculado = cea2.matriculados.ID_matriculado\r\n"
+					+ "WHERE cea2.matriculados.ID_cliente = 1;";
+			break;
+		case 6:
+			query = "SELECT cea.clasepractica.ID_claseP, cea.clasepractica.descripcion, cea.instructor.Nombre, cea.instructor.Apellido "
+					+ "FROM cea.clasepractica JOIN cea.instructor ON cea.clasepractica.ID_instructor = cea.instructor.ID_instructor WHERE "
+					+ "cea.clasepractica.ID_vehiculo = 4;";
+			break;
+			
+		case 7:
+			query = "SELECT cea.examenpractico.ID_examenP,cea.examenpractico.ID_matriculado, cea.examenpractico.resultado, cea.vehiculos.Placa, "
+					+ "cea.vehiculos.Modelo FROM cea.examenpractico JOIN cea.vehiculos ON cea.examenpractico.ID_vehiculo = cea.vehiculos.ID_vehiculo "
+					+ "WHERE cea.examenpractico.ID_instructor = 3;";
+			break;
+		case 8:
+			query = "SELECT cea2.matriculados.ID_matriculado, cea2.examenteorico.ID_examenT, cea2.examenteorico.resultado FROM cea2.examenteorico"
+					+ " JOIN cea2.matriculados ON cea2.examenteorico.ID_matriculado = cea2.matriculados.ID_matriculado WHERE "
+					+ "cea2.examenteorico.resultado = 'Aprobado';";
+			break;
+		case 9:
+			query = "SELECT cea2.examenteorico.ID_examenT, cea2.examenteorico.resultado, cea2.matriculados.ID_matriculado\r\n"
+					+ "FROM cea2.examenteorico\r\n"
+					+ "JOIN cea2.matriculados ON cea2.examenteorico.ID_matriculado = cea2.matriculados.ID_matriculado;";
+			break;
+		case 10:
+			query = "SELECT cea.examenpractico.ID_examenP, cea.examenpractico.resultado, cea.vehiculos.Placa, cea.vehiculos.Modelo, "
+					+ "cea.vehiculos.Marca FROM cea.examenpractico JOIN cea.vehiculos ON cea.examenpractico.ID_vehiculo = cea.vehiculos.ID_vehiculo;";
+			break;
+		
 		default:
 			// Si el ID no coincide con ninguna consulta conocida, retorna un mensaje de
 			// error o manejo según tu requerimiento
