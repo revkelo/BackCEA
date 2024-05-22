@@ -50,5 +50,9 @@ public class ClienteController {
 	public void deleteCliente(@PathVariable int id) {
 		service.deleteCliente(id);
 	}
+	  @GetMapping("/{id}/nombre")
+	    public String getNombreClienteById(@PathVariable int id) {
+	        return service.getNombreClienteById(id);
+	    }
 
 }

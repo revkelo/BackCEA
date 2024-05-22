@@ -17,5 +17,5 @@ public class ExamenPracticoReprobadoService {
     public List<Examen_PracticoReprobado> getAllExamenesPracticos() {
         return repository.findAll();
     }
-
+    
 }

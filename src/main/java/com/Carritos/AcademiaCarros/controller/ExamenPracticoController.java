@@ -52,7 +52,7 @@ public class ExamenPracticoController {
    		temp.setResultado(resultado);
 
    		service.createExamenPractico(temp);
-   		return ResponseEntity.status(HttpStatus.CREATED).body("Dato creado con Ã©xito: 201");
+   		return ResponseEntity.status(HttpStatus.CREATED).body("Dato creado con exito: 201");
    	}
 
     @PutMapping("/{id}")

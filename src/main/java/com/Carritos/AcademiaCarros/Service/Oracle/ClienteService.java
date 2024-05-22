@@ -42,4 +42,9 @@ public class ClienteService {
 	    public void deleteCliente(int id) {
 	        repository.deleteById(id);
 	    }
+	    
+	    public String getNombreClienteById(int id) {
+	        Optional<Cliente> clienteOptional = repository.findById(id);
+	        return clienteOptional.map(Cliente::getNombre).orElse(null);
+	    }
 }
