@@ -49,7 +49,7 @@ public class ConsultaController {
 		case 2:
 			query = "SELECT cea2.examenteorico.ID_examenT, cea2.examenteorico.resultado " + "FROM cea2.examenteorico "
 					+ "JOIN cea2.matriculados ON cea2.examenteorico.ID_matriculado = cea2.matriculados.ID_matriculado "
-					+ "WHERE cea2.matriculados.ID_cliente = ?";
+					+ "WHERE cea2.matriculados.ID_cliente = 5";
 			break;
 		case 3:
 			query = "SELECT cea2.claseteorica.ID_claseT, cea2.claseteorica.descripcion, cea.instructor.Nombre, cea.instructor.Apellido\r\n"
@@ -105,10 +105,6 @@ public class ConsultaController {
 		try (Connection connection = mysqlDS2.getConnection();
 				PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-			if (id == 2) { // En el caso 2, necesitamos configurar el ID_cliente en la consulta preparada
-				preparedStatement.setInt(1, 1); // Aquí se asume que 1 es el ID_cliente específico, puedes ajustarlo
-												// según tus necesidades
-			}
 
 			try (ResultSet resultSet = preparedStatement.executeQuery()) {
 				ResultSetMetaData metaData = resultSet.getMetaData();

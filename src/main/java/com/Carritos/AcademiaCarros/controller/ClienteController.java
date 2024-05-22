@@ -34,12 +34,18 @@ public class ClienteController {
 		return service.getClienteById(id);
 	}
 
+
+	@GetMapping("/{id}/nombre")
+	public String getNombreClienteById(@PathVariable int id) {
+		return service.getNombreClienteById(id);
+	}
+	
 	@PostMapping
 	public Cliente createCliente(@RequestBody Cliente cliente) {
 
-
 		return service.createCliente(cliente);
 	}
+	
 
 	@PutMapping("/{id}")
 	public Cliente updateCliente(@PathVariable int id, @RequestBody Cliente clienteDetails) {
@@ -50,9 +56,6 @@ public class ClienteController {
 	public void deleteCliente(@PathVariable int id) {
 		service.deleteCliente(id);
 	}
-	  @GetMapping("/{id}/nombre")
-	    public String getNombreClienteById(@PathVariable int id) {
-	        return service.getNombreClienteById(id);
-	    }
+
 
 }
